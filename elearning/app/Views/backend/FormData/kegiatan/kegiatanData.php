@@ -1,7 +1,7 @@
 <div class="col-12 py-3 shadow-sm" style="background-color: white !important; border-radius:10px !important;">
     <div class="col-12 mb-3 p-0">
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-            Insert Data kegiatan
+            Insert Data Berita
         </button>
     </div>
     <div class="table-responsive kegiatan-table">

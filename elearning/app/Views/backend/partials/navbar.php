@@ -31,7 +31,7 @@ $admin = session('user');
             <hr>
         </li>
         <li class="nav-item">
-            <a class="nav-link p-1" href="<?= site_url('/kegiatanPage') ?>">Kegiatan</a>
+            <a class="nav-link p-1" href="<?= site_url('/kegiatanPage') ?>">Berita</a>
         </li>
     </ul>
 <?php else : ?>
@@ -49,7 +49,7 @@ $admin = session('user');
             <hr>
         </li>
         <li class="nav-item">
-            <a class="nav-link p-1" href="<?= site_url('/kegiatanPage') ?>">Kegiatan</a>
+            <a class="nav-link p-1" href="<?= site_url('/kegiatanPage') ?>">Berita</a>
         </li>
     </ul>
 <?php endif ?>
