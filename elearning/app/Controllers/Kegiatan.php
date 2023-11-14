@@ -29,12 +29,14 @@ class Kegiatan extends BaseController
 
         $nama_kegiatan = $this->request->getPost('nama_kegiatan');
         $artikel_kegiatan = $this->request->getPost('artikel_kegiatan');
+        $tanggal = $this->request->getPost('tanggal');
 
         $data = [
 
             'nama_kegiatan' => $nama_kegiatan,
             'gambar' => $filename ?? 'error.jpg',
             'artikel_kegiatan' => $artikel_kegiatan,
+            'tanggal' => $tanggal,
 
         ];
 
@@ -65,6 +67,7 @@ class Kegiatan extends BaseController
         $gambar = $this->request->getFile('gambar');
         $nama_kegiatan = $this->request->getPost('nama_kegiatan');
         $artikel_kegiatan = $this->request->getPost('artikel_kegiatan');
+        $tanggal = $this->request->getPost('tanggal');
 
         $kegiatan = $KegiatanModel->find($id);
 
@@ -87,6 +90,7 @@ class Kegiatan extends BaseController
             'nama_kegiatan' => $nama_kegiatan,
             'gambar' => $file_name,
             'artikel_kegiatan' => $artikel_kegiatan,
+            'tanggal' => $tanggal,
         ]);
 
         return redirect()->to('/kegiatanPage');

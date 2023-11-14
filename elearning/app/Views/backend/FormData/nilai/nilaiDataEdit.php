@@ -26,7 +26,7 @@
                                 <label for="nis">Nama Siswa : </label>
                                 <select type="text" class="form-control" name="siswa_id" id="nis">
                                     <?php foreach ($DataSiswa as $key => $value): ?>
-                                        <option value="<?=$value['id']?>" <?= ($value['id'] == $NilaiDataEdit['siswa_id']) ? 'selected' : '' ?>><?=$value['nama_depan']?> <?=$value['nama_belakang']?> || <?=$value['kelas']?><?=$value['nama_jurusan']?></option>
+                                        <option value="<?=$value['id']?>" <?= ($value['id'] == $NilaiDataEdit['siswa_id']) ? 'selected' : '' ?>><?=$value['nama_depan']?> <?=$value['nama_belakang']?> - <?=$value['kelas']?> - <?=$value['nama_jurusan']?></option>
                                     <?php endforeach?>
                                 </select>
                             </div>

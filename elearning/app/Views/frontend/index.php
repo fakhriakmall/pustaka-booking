@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="text-capitalize">Siswa || <?= session('siswa.nama_depan') ?></title>
+    <title class="text-capitalize">Siswa - <?= session('siswa.nama_depan') ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
@@ -30,7 +30,7 @@
             <div class="container d-flex justify-content-between">
 
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">E-Learning</a>
+                <a class="navbar-brand" href="#">Di-Lemas</a>
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -55,7 +55,7 @@
                             <div class="name">
                                 <h5 class="text-capitalize font-weight-bold m-0" style="font-size: 16px;"><?= $SiswaData['nama_depan'] ?> <?= $SiswaData['nama_belakang'] ?></h5>
                                 <h6 class="text-capitalize m-0 mt-2" style="font-size: 10px;">
-                                    <?= $SiswaData['kelas'] ?><?= $SiswaData['nama_jurusan'] ?>
+                                    <?= $SiswaData['kelas'] ?> - <?= $SiswaData['nama_jurusan'] ?>
                                 </h6>
                             </div>
                         </div>
@@ -72,15 +72,15 @@
                                     </h6>
                                 </div>
                                 <hr>
-                                <div class="col-12 p-0 py-2 d-flex justify-content-between align-items-center">
-                                    <h6 class="text-capitalize font-weight-bold m-0" style="font-size: 12px;">
-                                        Rata-rata
-                                    </h6>
-                                    <h6 class="text-capitalize m-0" style="font-size: 12px;">
-                                        <?= number_format($rataRataNilai, 1) ?>
-                                    </h6>
-                                </div>
                             <?php endforeach ?>
+                            <div class="col-12 p-0 py-2 d-flex justify-content-between align-items-center">
+                                <h6 class="text-capitalize font-weight-bold m-0" style="font-size: 12px;">
+                                    Rata-rata
+                                </h6>
+                                <h6 class="text-capitalize m-0" style="font-size: 12px;">
+                                    <?= number_format($rataRataNilai, 1) ?>
+                                </h6>
+                            </div>
                         <?php else : ?>
                             <div class="col-12 p-0 my-auto">
                                 <h6 style="font-size: 12px;">Data Nilai Anda Masih Kosong</h6>
@@ -172,15 +172,18 @@
                         <div class="row">
 
                             <div class="col-12 mb-3 article shadow-sm">
-                                <div class="font-weight-bold">Kegiatan Sekolah</div>
+                                <div class="font-weight-bold">Berita</div>
                             </div>
 
                             <?php foreach ($KegiatanData as $kegiatan) : ?>
                                 <div class="col-12 mb-3 article shadow-sm article-kegiatan">
-                                    <img src="<?= base_url('images/kegiatan/'. $kegiatan['gambar']) ?>" alt="" class="img-fluid">
-                                    <div class="h6 mt-3"><?=$kegiatan['nama_kegiatan']?></div>
+                                    <img src="<?= base_url('images/kegiatan/' . $kegiatan['gambar']) ?>" alt="" class="img-fluid">
+                                    <div class="h6 mt-3"><?= $kegiatan['nama_kegiatan'] ?></div>
                                     <div class="p">
-                                        <?=$kegiatan['artikel_kegiatan']?>
+                                        <?= $kegiatan['artikel_kegiatan'] ?>
+                                    </div>
+                                    <div class="mt-2">
+                                        <strong>Tanggal:</strong> <?= $kegiatan['tanggal'] ?>
                                     </div>
                                 </div>
                             <?php endforeach ?>
@@ -192,37 +195,26 @@
 
 
                 <!-- mobile -->
-                <div class="col-12 mt-3 w-kegiatan pt-0 d-lg-none p-0 ">
+                <div class="col-12 mt-3 w-kegiatan pt-0 d-lg-none p-0">
                     <div class="col-12 px-5 kegiatan p-0">
                         <div class="row">
 
                             <div class="col-12 mb-3 article shadow-sm p-0">
-                                <div class="font-weight-bold">Kegiatan Sekolah Mobile</div>
+                                <div class="font-weight-bold">Berita</div>
                             </div>
 
-                            <div class="col-12 mb-3 article shadow-sm">
-                                <img src="<?= base_url('images/gm.jpg') ?>" alt="" class="img-fluid">
-                                <div class="h6 mt-3">Kegiatan Acara Hari Guru</div>
-                                <div class="p">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quia eius adipisci modi, repellendus totam aperiam ullam, quas quam ex nulla illum. Quidem esse ea recusandae aut sequi saepe consectetur similique provident sit.
+                            <?php foreach ($KegiatanData as $kegiatan) : ?>
+                                <div class="col-12 mb-3 article shadow-sm">
+                                    <img src="<?= base_url('images/kegiatan/' . $kegiatan['gambar']) ?>" alt="" class="img-fluid">
+                                    <div class="h6 mt-3"><?= $kegiatan['nama_kegiatan'] ?></div>
+                                    <div class="p">
+                                        <?= $kegiatan['artikel_kegiatan'] ?>
+                                    </div>
+                                    <div class="mt-2">
+                                        <strong>Tanggal:</strong> <?= $kegiatan['tanggal'] ?>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="col-12 mb-3 article shadow-sm">
-                                <img src="<?= base_url('images/gm.jpg') ?>" alt="" class="img-fluid">
-                                <div class="h6 mt-3">Kegiatan Acara Hari Guru</div>
-                                <div class="p">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quia eius adipisci modi, repellendus totam aperiam ullam, quas quam ex nulla illum. Quidem esse ea recusandae aut sequi saepe consectetur similique provident sit.
-                                </div>
-                            </div>
-
-                            <div class="col-12 mb-3 article">
-                                <img src="<?= base_url('images/gm.jpg') ?>" alt="" class="img-fluid">
-                                <div class="h6 mt-3">Kegiatan Acara Hari Guru</div>
-                                <div class="p">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quia eius adipisci modi, repellendus totam aperiam ullam, quas quam ex nulla illum. Quidem esse ea recusandae aut sequi saepe consectetur similique provident sit.
-                                </div>
-                            </div>
+                            <?php endforeach ?>
 
                         </div>
                     </div>

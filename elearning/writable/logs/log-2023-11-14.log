@@ -1,0 +1,24 @@
+CRITICAL - 2023-11-14 10:02:21 --> Trying to access array offset on value of type null
+in APPPATH\Views\frontend\index.php on line 56.
+ 1 APPPATH\Views\frontend\index.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\pustaka-booking\\elearning\\app\\Views\\frontend\\index.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\pustaka-booking\\elearning\\app\\Views\\frontend\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontend/index', [], true)
+ 5 APPPATH\Controllers\Frontend.php(37): view('frontend/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Frontend->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\pustaka-booking\\elearning\\public\\index.php')
+CRITICAL - 2023-11-14 12:45:10 --> Trying to access array offset on value of type null
+in APPPATH\Views\frontend\index.php on line 56.
+ 1 APPPATH\Views\frontend\index.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\pustaka-booking\\elearning\\app\\Views\\frontend\\index.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\pustaka-booking\\elearning\\app\\Views\\frontend\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontend/index', [], true)
+ 5 APPPATH\Controllers\Frontend.php(37): view('frontend/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Frontend->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\pustaka-booking\\elearning\\public\\index.php')

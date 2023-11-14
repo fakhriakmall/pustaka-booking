@@ -17,24 +17,28 @@
             </div>
 
             <!-- Modal body -->
-            <form action="<?= site_url('/kegiatanDataUpdate/'. $dataKegiatan['id']) ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('/kegiatanDataUpdate/' . $dataKegiatan['id']) ?>" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="row m-0">
 
                         <div class="col-12">
                             <div class="form-group">
                                 <label for="nis">Nama Kegiatan : </label>
-                                <input type="text" name="nama_kegiatan" class="form-control" value="<?= $dataKegiatan['nama_kegiatan']?>">
+                                <input type="text" name="nama_kegiatan" class="form-control" value="<?= $dataKegiatan['nama_kegiatan'] ?>">
                             </div>
                             <div class="form-group">
-                                <img src="<?= base_url('images/kegiatan/'. $dataKegiatan['gambar'])?>" alt="" class="img-fluid" style="width: 100px">
+                                <img src="<?= base_url('images/kegiatan/' . $dataKegiatan['gambar']) ?>" alt="" class="img-fluid" style="width: 100px">
                                 <br>
                                 <label for="nis">Gambar Kegiatan : </label>
                                 <input type="file" name="gambar" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="nis">Artikel Kegiatan : </label>
-                                <textarea name="artikel_kegiatan" class="form-control"><?= $dataKegiatan['artikel_kegiatan']?></textarea>
+                                <textarea name="artikel_kegiatan" class="form-control"><?= $dataKegiatan['artikel_kegiatan'] ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal:</label>
+                                <input type="date" name="tanggal" class="form-control" value="<?= $dataKegiatan['tanggal'] ?>">
                             </div>
                         </div>
                     </div>

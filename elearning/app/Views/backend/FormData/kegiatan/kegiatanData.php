@@ -1,7 +1,7 @@
 <div class="col-12 py-3 shadow-sm" style="background-color: white !important; border-radius:10px !important;">
     <div class="col-12 mb-3 p-0">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-            + Insert Data kegiatan
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+            Insert Data kegiatan
         </button>
     </div>
     <div class="table-responsive kegiatan-table">
@@ -12,7 +12,8 @@
                     <th>Nama Kegiatan</th>
                     <th>Mapel</th>
                     <th>Kegiatan</th>
-                    <th>Id_Kegiatan</th>
+                    <th>Deskripsi Kegiatan</th>
+                    <th>Tanggal</th>
                     <th class="text-center">Aksi</th>
                 </tr>
             </thead>
@@ -25,9 +26,10 @@
                         <td><?= $kegiatan['id'] ?></td>
                         <td><?= $kegiatan['nama_kegiatan'] ?></td>
                         <td>
-                            <img style="width:50px;" src="<?=base_url('images/kegiatan/'. $kegiatan['gambar'])?>" alt="">
+                            <img style="width:50px;" src="<?= base_url('images/kegiatan/' . $kegiatan['gambar']) ?>" alt="">
                         </td>
                         <td><?= $kegiatan['artikel_kegiatan'] ?></td>
+                        <td><?= $kegiatan['tanggal'] ?></td>
 
                         <td class="text-center">
 
@@ -44,7 +46,8 @@
                     <th>Nama Kegiatan</th>
                     <th>Mapel</th>
                     <th>Kegiatan</th>
-                    <th>Id_Kegiatan</th>
+                    <th>Deskripsi Kegiatan</th>
+                    <th>Tanggal</th>
                     <th class="text-center">Aksi</th>
                 </tr>
             </tfoot>
@@ -80,6 +83,10 @@
                                 <textarea name="artikel_kegiatan" class="form-control">
 
                                 </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal:</label>
+                                <input type="date" name="tanggal" class="form-control">
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ $guru = session('guru');
 $admin = session('user');
 ?>
 <h5 class="navbar-brand font-weight-bold m-0 mt-4 text-center">Di-Lemas</h5><br>
-<small class="text-capitalize text-center"><?= session('user.role') ?? session('guru.nama_depan') . session('guru.nama_belakang') ?></small>
+<small class="text-capitalize text-center"><?= session('user.role') ?? session('guru.nama_depan') . ' ' . session('guru.nama_belakang') ?></small>
 <br>
 <br>
 
